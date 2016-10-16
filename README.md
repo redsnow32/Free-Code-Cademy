@@ -25,20 +25,39 @@ Practicing HTML
   .smaller-image {
     width: 100px;
   }
+
+  .silver-background {
+    background-color: silver;
+  }
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
 
 <p>Click here for <a href="#">cat photos</a>.</p>
 
-<a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
+<a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back. " src="https://bit.ly/fcc-relaxing-cat"></a>
 
-<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
-<p>Things cats like</p>
+<div class="silver-background">
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+</div>
 
-<ul>
-  <li>Mice</li>
-  <li>Yarn</li>
-  <li>Other kitties</li>
-</ul>
+<form action="/submit-cat-photo" id="cat-photo-form">
+  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+  <label><input type="checkbox" name="personality" checked> Loving</label>
+  <label><input type="checkbox" name="personality"> Lazy</label>
+  <label><input type="checkbox" name="personality"> Energetic</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
